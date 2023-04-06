@@ -4,14 +4,14 @@ A web app built with Django and Django rest framework that is made for just vent
 ### Create a virtual environment
 `python -m venv venv`
 
-# Activate virtualenv
+### Activate virtualenv
 `. venv/bin/activate` or `source venv/bin/activate`
 
-# Install Dependencies
+### Install Dependencies
 `python -m pip install -r requirements.txt`
 
-# Migrate db of project
+### Migrate db of project
 `python -m manage migrate`
 
-# Run server
+### Run server
 `python -m manage runserver`
