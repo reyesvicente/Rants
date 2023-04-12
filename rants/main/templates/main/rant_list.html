@@ -3,6 +3,7 @@ Test<br>
 
 {{rant.title}}<br>
 {% for category in rant.categories.all %}
+<a href="{% url 'main:detail' rant.slug %}">{{ rant.title }}</a>
 {{ category.title}}<br>
 {% endfor %}
 {% endfor %}

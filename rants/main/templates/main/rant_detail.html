@@ -1,0 +1,4 @@
+{{ rant.title }}<br>
+{% for category in rant.categories.all %}
+    {{ category.title}}
+{% endfor %}

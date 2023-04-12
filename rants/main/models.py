@@ -32,3 +32,7 @@ class Rant(models.Model):
         self.slug = slugify(self.title)
         super(Rant, self).save(*args, **kwargs)
         return self.slug
+
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('main:detail', kwargs={'slug': self.slug})
