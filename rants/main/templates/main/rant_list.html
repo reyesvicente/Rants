@@ -1,0 +1,8 @@
+Test<br>
+{% for rant in rants %}
+
+{{rant.title}}<br>
+{% for category in rant.categories.all %}
+{{ category.title}}<br>
+{% endfor %}
+{% endfor %}

@@ -1,4 +1,4 @@
-from main.serializers import RantSerializer, CategorySerializer
+from rants.main.api.serializers import RantSerializer, CategorySerializer
 
 
 def test_valid_rant_serializer():
