@@ -10,7 +10,9 @@
           <span>Rantr</span>
         </h1>
       </div>
+      {% if user.is_authenticated %}
       {% for rant in rants %}
+      
       <div class="max-w-5xl mx-auto">
         <div class="py-8">
           <div class="flex flex-wrap lg:flex-nowrap items-center">
@@ -22,13 +24,20 @@
                 {% for category in rant.categories.all %}
                 <span class="block text-gray-400 mb-1">#{{ category.title }}</span>
                 {% endfor %}
+                {% if rant.created_at  !=  rant.updated_at  %}
                 <small class="block text-gray-400 mb-1">{{ rant.created_at }}</small>
+                {% else %}
+                {{ rant.updated_at }}
+                {% endif %}
               </div>
             </div>
           </div>
         </div>
       </div>
       {% endfor %}
+      {% else %}
+      Must login
+      {% endif %}
     </div>
   </section>
   {% endblock content %}
