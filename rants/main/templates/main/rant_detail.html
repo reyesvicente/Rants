@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
+{% if user.is_authenticated %}
 <section class="py-20 md:py-24">
     <div class="container px-4 mx-auto">
       <div class="relative max-w-7xl mx-auto px-6 md:px-12 py-16 sm:py-28 rounded-4xl bg-orange-800 overflow-hidden">
@@ -28,5 +28,8 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>   
+{% else %}
+<div class="container text-center"><p>Login first</p></div> 
+{% endif %}
 {% endblock content %}
