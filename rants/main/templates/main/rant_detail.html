@@ -1,4 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
 {{ rant.title }}<br>
 {% for category in rant.categories.all %}
     {{ category.title}}
 {% endfor %}
+{% endblock content %}
