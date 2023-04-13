@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.text import slugify
@@ -24,6 +25,8 @@ class Rant(models.Model):
     categories = models.ManyToManyField(
         Category, related_name='rants_categories')
     user = models.ForeignKey(User, default='', null=True, related_name='users_rant', on_delete=models.PROTECT)
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateField(auto_now=True)
 
     class Meta:
         verbose_name = "rant"
