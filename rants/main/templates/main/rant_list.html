@@ -20,8 +20,9 @@
               <div class="max-w-2xl">
                 <p class="text-2xl font-semibold text-gray-900"><a href="{% url 'main:detail' rant.slug %}">{{ rant.title }}</a></p>
                 {% for category in rant.categories.all %}
-                <span class="block text-gray-400 mb-1">{{ category.title }}</span>
+                <span class="block text-gray-400 mb-1">#{{ category.title }}</span>
                 {% endfor %}
+                <small class="block text-gray-400 mb-1">{{ rant.created_at }}</small>
               </div>
             </div>
           </div>
