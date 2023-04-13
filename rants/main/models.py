@@ -1,5 +1,8 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.text import slugify
+
+User = get_user_model()
 
 
 class Category(models.Model):
@@ -20,6 +23,7 @@ class Rant(models.Model):
     slug = models.SlugField(max_length=150)
     categories = models.ManyToManyField(
         Category, related_name='rants_categories')
+    user = models.ForeignKey(User, default='', null=True, related_name='users_rant', on_delete=models.PROTECT)
 
     class Meta:
         verbose_name = "rant"
