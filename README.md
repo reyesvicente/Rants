@@ -1,6 +1,8 @@
 # Rants
 A web app built with Django and Django rest framework that is made for just venting out online
 
+This repo is based on [this article](https://vicentereyes.org/getting-started-with-django-rest-framework) that I wrote.
+
 ### Create a virtual environment
 `python -m venv venv`
 
