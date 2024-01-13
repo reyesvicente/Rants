@@ -1,4 +1,4 @@
-Django==4.1.7
+Django==4.1.10
 djangorestframework==3.14.0
 drf-writable-nested==0.7.0  # https://github.com/beda-software/drf-writable-nested
 drf-yasg==1.21.5
